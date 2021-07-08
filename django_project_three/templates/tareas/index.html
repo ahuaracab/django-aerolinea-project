@@ -1,0 +1,10 @@
+{% extends "tareas/layout.html" %}
+
+{% block body %}
+    {% for tarea in tareas %}
+        <li>{{tarea}}</li>
+    {% endfor %}    
+    <div class="acciones">
+        <a href="{% url 'django_project_three:agregar' %}">Agregar una nueva tarea</a>
+    </div>
+{% endblock %}
